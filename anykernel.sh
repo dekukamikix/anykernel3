@@ -4,14 +4,14 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string= SilonT Kernel by azrim @ github
+kernel.string=SilonT Kernel by azrim @ github
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=surya
-device.name2=
+device.name2=karna
 device.name3=
 device.name4=
 device.name5=
@@ -35,8 +35,11 @@ ramdisk_compression=auto;
 set_perm_recursive 0 0 755 644 $ramdisk/*;
 set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 
-
 ## AnyKernel install
-dump_boot;
-write_boot;
+#dump_boot;
+split_boot;
+
+#write_boot;
+flash_boot;
+flash_dtbo;
 ## end install
