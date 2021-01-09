@@ -19,16 +19,6 @@ supported.versions=
 supported.patchlevels=
 '; } # end properties
 
-ui_print "";
-ui_print "==================================";
-ui_print "||         Support Group        ||";
-ui_print "||        t.me/azrim_lab        ||";
-ui_print "||      t.me/silont_support     ||";
-ui_print "==================================";
-ui_print "       Don't forget to rate       ";
-ui_print "       our project on Pling       ";
-ui_print "----------------------------------";
-
 # shell variables
 block=/dev/block/bootdevice/by-name/boot;
 is_slot_device=0;
