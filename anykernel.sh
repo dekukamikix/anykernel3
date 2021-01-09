@@ -19,6 +19,16 @@ supported.versions=
 supported.patchlevels=
 '; } # end properties
 
+ui_print "";
+ui_print "==================================";
+ui_print "||         Support Group        ||";
+ui_print "||        t.me/azrim_lab        ||";
+ui_print "||      t.me/silont_support     ||";
+ui_print "==================================";
+ui_print "       Don't forget to rate       ";
+ui_print "       our project on Pling       ";
+ui_print "----------------------------------";
+
 # shell variables
 block=/dev/block/bootdevice/by-name/boot;
 is_slot_device=0;
@@ -31,14 +41,6 @@ ramdisk_compression=none;
 ## AnyKernel install
 # dump_boot;
 split_boot;
-
-ui_print "";
-ui_print "==============================";
-ui_print "||       Support Group      ||";
-ui_print "||      t.me/azrim_lab      ||";
-ui_print "||    t.me/silont_support   ||";
-ui_print "==============================";
-ui_print "";
 
 if [ -f $split_img/ramdisk.cpio ]; then
   unpack_ramdisk;
