@@ -4,41 +4,41 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=
+kernel.string=Ganyu Kernel
 do.devicecheck=1
 do.modules=0
-do.systemless=0
+do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=surya
-device.name2=karna
-device.name3=surya_in
-device.name4=karna_in
+device.name1=vayu
+device.name2=bhima
+device.name3=
+device.name4=
 device.name5=
-supported.versions=
+supported.versions=11.0
 supported.patchlevels=
 '; } # end properties
 
 # shell variables
 block=/dev/block/bootdevice/by-name/boot;
 is_slot_device=0;
-ramdisk_compression=none;
+ramdisk_compression=auto;
+
 
 ## AnyKernel methods (DO NOT CHANGE)
 # import patching functions/variables - see for reference
 . tools/ak3-core.sh;
 
+
+## AnyKernel file attributes
+# set permissions/ownership for included ramdisk files
+set_perm_recursive 0 0 755 644 $ramdisk/*;
+set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
+
+
 ## AnyKernel install
-# dump_boot;
-split_boot;
+dump_boot;
 
-if [ -f $split_img/ramdisk.cpio ]; then
-  unpack_ramdisk;
-  repack_ramdisk;
-fi;
-
-flash_boot;
-flash_dtbo;
-# backup_file init.rc;
-
+write_boot;
 ## end install
+
