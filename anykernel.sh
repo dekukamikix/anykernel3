@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Mechatron Kernel
+kernel.string=Mechatron Meme Kernel
 maintainer.string1=built by ichiro [t.me/PenguasaTerkuat]
 do.devicecheck=1
 do.modules=0
@@ -12,7 +12,7 @@ do.cleanup=1
 do.cleanuponabort=1
 device.name1=surya
 device.name2=karna
-supported.versions=11-12
+supported.versions=10-12
 '; } # end properties
 
 # shell variables
