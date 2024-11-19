@@ -4,13 +4,13 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=SingkoKernel
+kernel.string=Mechatron-X5 
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=moonstone 
+device.name1=moonstone
 device.name2=sunstone
 device.name3=stone
 device.name4=
